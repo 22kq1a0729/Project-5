@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>Registration form</title>
+<script>
+    function regValidation(){
+        var name=document.myform.username.value;
+        var nameInKannada=document.myform.namekannada.value;
+        var idKannada=document.myform.idkannada.value;
+        var idEnglish=document.myform.idenglish.value;
+        if(name==""||nameInKannada==""||idKannada==""||idEnglish==""){
+            alert("Name cant be blank")
+               return false; 
+        }
+        else{
+        return true;}
+    }
+</script>
+<style>
+    h1{
+        background-color: rgb(9, 137, 37);
+        color:white;
+    }
+   body{ background-color:skyblue;
+   background-image: url("fruit.jpg");
+   background-size: cover;}
+
+
+nav{
+    background-color: rgb(4, 102, 4);
+    color:white;
+    padding: 20px;
+            padding-left: 230px;
+}
+nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0px;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 100px;
+        }
+        nav ul li a {
+            color: rgb(240, 227, 227);
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+</style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register-CSS.html">RegistrationForm</a></li>
+            <li><a href="citizenlogin.html">Citizen Login</a></li>
+            <li><a href="contactus.html">Contact</a></li>
+            <li><a href="Exp9-Video.html">Video</a></li>
+        </ul>
+    </nav>
+    <center><h1>Registration Form...</h1>
+<table bgColor="white" cellpadding="10" cellspacing="10">
+    <form name="myform" action="citizenlogin.html" 	onsubmit="return regValidation(this)">
+<tr><td>Name:</td><td><input type="text" name="username" placeholder="Name in english" autofocus></td></tr>
+<tr><td>Name in Kannada:</td><td><input type="text" name="namekannada"placeholder="Name in kannada"></td></tr>
+<tr><td>Identifier Name in kannada:</td><td><input type="text" name="idkannada"placeholder="Identifier Name in kannada"></td></tr>
+<tr><td>Identifier Name in English:</td><td><input type="text" name="idenglish"placeholder="Identifier Name in English"></td></tr>
+<tr><td>Gender:</td><td><input type="radio" name="gender">Male<input type="radio" name="gender">female</td></tr>
+<tr><td>MobileNo:</td><td><input type="tel" name="" pattern="[0-9]{10}" placeholder="Mobile No"></td></tr>
+<tr><td>Date of birth:</td><td><input type="date" name="dob"></td></tr>
+<tr><td><input type="submit"></td></tr></form>
+</table></center>
+
+</html>

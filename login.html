@@ -1,0 +1,92 @@
+<html>
+   <head>
+         <title>JavaScript functions </title>
+      </head>      
+      <script>
+         
+ function loginValidation() {
+            
+   var uname = document.myform.username.value;
+             
+   var password = document.myform.password.value;
+             if(uname==null || uname=="") {
+               alert("Name cant be blank")
+               return false;  
+            } else if (password.length<6){
+               alert("Password Must be 6 letters")
+               return false;
+            }  
+            return true                 
+         }           
+      </script>
+      <style>
+         
+            body{
+                background-image: url("green.jpg");
+                background-size: cover;
+            }
+            h2{
+                color: rgb(14, 112, 38);
+            }
+            nav{
+    background-color: rgb(4, 102, 4);
+    color:white;
+    padding: 20px;
+            padding-left: 230px;
+}
+nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0px;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 100px;
+        }
+        nav ul li a {
+            color: rgb(240, 227, 227);
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }    
+form{
+    text-align: center;
+}
+table{
+   background-image: url("grass.jpg");
+   background-size: cover;
+   text-align: center;
+   padding-left: 40px;
+   padding-right: 40px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  color:white;
+}
+button{
+   width: 100px;
+   
+}
+      </style>
+      </head>
+      <body>
+         <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register-CSS.html">RegistrationForm</a></li>
+                <li><a href="citizenlogin.html">Citizen Login</a></li>
+                <li><a href="contactus.html">Contact</a></li>
+                <li><a href="Exp9-Video.html">Video</a></li>
+            </ul>
+        </nav>
+        <form name="myform" action="register-CSS.html" 	onsubmit="return loginValidation(this)">
+        <center> <table> <h2>Login Page</h2>  
+  <tr><td>User Name:</td><td><input type="text" name="username" placeholder="Enter your name" autofocus></td></tr> 
+   <tr> <td>Password: </td><td><input type="password" name="password" placeholder="Password"></td></tr>
+    <tr><td> <center><button>     Login      </button></center></td></tr>
+   </table></center>
+      </form>
+    </body>
+</html>
